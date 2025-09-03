@@ -1,0 +1,28 @@
+// @import '../styles/themes/variables';
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section {
+    background: var(--bg-primary);
+    background-image: 
+    radial-gradient(circle at 25% 25%, var(--primary-900) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, var(--primary-800) 0%, transparent 50%);
+}
+
+.container {
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: var(--space-4);
+}
+
+p {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+}

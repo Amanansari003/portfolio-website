@@ -1,0 +1,116 @@
+<header class="header" [class.scrolled]="isScrolled$()">
+  <nav class="nav-container">
+    <!-- Logo/Brand -->
+    <div class="brand" (click)="scrollToHome()">
+      <span class="brand-text">Portfolio</span>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <ul class="nav-links desktop-nav">
+      <li *ngFor="let item of navItems" class="nav-item">
+        <a 
+          (click)="scrollToSection(item.id)" 
+          class="nav-link"
+          [class.active]="isActiveSection(item.id)"
+          [attr.aria-label]="'Navigate to ' + item.label + ' section'"
+        >
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+
+    <!-- Theme Toggle & Mobile Menu Button -->
+    <div class="nav-actions">
+      <!-- Theme Toggle Button -->
+      <button 
+        class="theme-toggle-btn"
+        (click)="toggleTheme()"
+        [attr.aria-label]="'Switch to ' + (isDarkTheme ? 'light' : 'dark') + ' theme'"
+        type="button"
+      >
+        <svg 
+          *ngIf="isDarkTheme" 
+          class="theme-icon"
+          width="20" 
+          height="20" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="2"
+        >
+          <circle cx="12" cy="12" r="5"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+        <svg 
+          *ngIf="!isDarkTheme" 
+          class="theme-icon"
+          width="20" 
+          height="20" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="2"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+
+      <!-- Mobile Menu Button -->
+      <button 
+        class="mobile-menu-button"
+        (click)="toggleMobileMenu()"
+        [class.active]="isMobileMenuOpen$()"
+        aria-label="Toggle mobile menu"
+        type="button"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu" [class.open]="isMobileMenuOpen$()">
+      <div class="mobile-menu-overlay" (click)="closeMobileMenu()"></div>
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+          <span class="mobile-brand">Portfolio</span>
+          <button 
+            class="mobile-close-btn"
+            (click)="closeMobileMenu()"
+            aria-label="Close mobile menu"
+            type="button"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        
+        <ul class="mobile-nav-links">
+          <li *ngFor="let item of navItems; let i = index" class="mobile-nav-item" [style.animation-delay.ms]="i * 100">
+            <a 
+              (click)="scrollToSection(item.id)" 
+              class="mobile-nav-link"
+              [class.active]="isActiveSection(item.id)"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        </ul>
+
+        <div class="mobile-menu-footer">
+          <button 
+            class="mobile-theme-toggle"
+            (click)="toggleTheme()"
+            type="button"
+          >
+            <span *ngIf="isDarkTheme">🌞 Light Mode</span>
+            <span *ngIf="!isDarkTheme">🌙 Dark Mode</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
