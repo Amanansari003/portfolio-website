@@ -64,5 +64,5 @@ export const DEFAULT_CONTACT_CONFIG: ContactConfig = {
     status: 'Ready to start a project?',
     description: "I'm currently available for freelance work and full-time opportunities."
   },
-  resumeUrl: '../../../assets/resume/Aman_Full_Stack_Developer_Resume.pdf'
+  resumeUrl: 'assets/resume/Aman_Full_Stack_Developer_Resume.pdf'
 };

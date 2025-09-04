@@ -249,7 +249,7 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
       
       case 'download':
         if (button.url) {
-          this.downloadFile(button.url, 'Sagar_Aman_Resume.pdf');
+          this.downloadFile(button.url, 'Aman_Full_Stack_Developer_Resume.pdf');
         }
         break;
       

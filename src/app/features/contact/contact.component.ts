@@ -125,7 +125,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     try {
       const link = document.createElement('a');
       link.href = this.config.resumeUrl;
-      link.download = 'Aman_Resume.pdf';
+      link.download = 'Aman_Full_Stack_Developer_Resume.pdf';
       link.target = '_blank';
       link.rel = 'noopener,noreferrer';
       
