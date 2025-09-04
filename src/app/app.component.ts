@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './layout/header/header.component';
 import { CommonModule } from '@angular/common';
 import { HeroComponent } from './features/hero/hero.component';
+import { AboutComponent } from './features/about/about.component';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import { HeroComponent } from './features/hero/hero.component';
     RouterOutlet,
     CommonModule,
     HeaderComponent,
-    HeroComponent
+    HeroComponent,
+    AboutComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

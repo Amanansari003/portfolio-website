@@ -138,7 +138,7 @@ export const DEFAULT_HERO_CONFIG: HeroConfig = {
   },
   responsive: {
     mobile: {
-      titleFontSize: 'clamp(2.5rem, 8vw, 4rem)',
+      titleFontSize: 'var(--text-3xl)',
       subtitleFontSize: 'clamp(1rem, 4vw, 1.25rem)',
       buttonLayout: 'stacked'
     },
@@ -148,7 +148,7 @@ export const DEFAULT_HERO_CONFIG: HeroConfig = {
       buttonLayout: 'horizontal'
     },
     desktop: {
-      titleFontSize: 'clamp(4rem, 5vw, 6rem)',
+      titleFontSize: 'var(--text-6xl)',
       subtitleFontSize: 'clamp(1.25rem, 2vw, 1.75rem)',
       buttonLayout: 'horizontal'
     }

@@ -11,7 +11,12 @@
       <!-- Main Title with Typewriter -->
       <div #titleElement class="hero-title-container">
         <h1 class="hero-title">
-          <span class="static-text">{{ config.content.staticText }} - </span>
+          <span 
+            class="static-text"
+            [style.font-size]="currentResponsiveConfig.titleFontSize"
+            >
+              {{ config.content.staticText }}&#160;
+            </span>
           <span class="animated-text-wrapper">
             <span 
               class="animated-text"
@@ -23,6 +28,7 @@
               class="cursor" 
               [class.visible]="showCursor()"
               [class.typing]="isTyping()"
+              [style.font-size]="currentResponsiveConfig.titleFontSize"
             >|</span>
           </span>
         </h1>
