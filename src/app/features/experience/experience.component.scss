@@ -64,8 +64,9 @@
   }
   
   &:hover {
-    border-color: var(--primary-400);
+    border-color: var(--border-accent);
     box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
   }
 
   @media (max-width: 1024px) {
