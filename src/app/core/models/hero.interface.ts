@@ -111,7 +111,7 @@ export const DEFAULT_HERO_CONFIG: HeroConfig = {
         text: 'Download Resume',
         type: 'secondary',
         action: 'download',
-        url: '/assets/documents/resume.pdf',
+        url: '/assets/resume/Aman_Full_Stack_Developer_Resume.pdf',
         ariaLabel: 'Download resume PDF file'
       }
     ]

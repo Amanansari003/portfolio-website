@@ -55,8 +55,7 @@
   opacity: 0;
   transform: translateY(30px);
   transition: all var(--transition-normal);
-  width: 70%;
-  max-width: 840px;
+  width: 100%;
   
   &.animate-in {
     opacity: 1;
