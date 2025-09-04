@@ -4,6 +4,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { CommonModule } from '@angular/common';
 import { HeroComponent } from './features/hero/hero.component';
 import { AboutComponent } from './features/about/about.component';
+import { SkillsComponent } from "./features/skills/skills.component";
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,9 @@ import { AboutComponent } from './features/about/about.component';
     CommonModule,
     HeaderComponent,
     HeroComponent,
-    AboutComponent
-  ],
+    AboutComponent,
+    SkillsComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
