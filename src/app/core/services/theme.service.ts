@@ -1,5 +1,5 @@
 import { Inject, Injectable, PLATFORM_ID, signal } from '@angular/core';
-import { Theme } from './models/theme.interface';
+import { Theme } from '../models/theme.interface';
 import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({

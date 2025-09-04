@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener, OnDestroy, OnInit, signal } from '@angular/core';
 import { ScrollService } from '../../core/services/scroll.service';
 import { ThemeService } from '../../core/services/theme.service';
-import { NavItem } from '../../core/services/models/navigation.interface';
+import { NavItem } from '../../core/models/navigation.interface';
 
 @Component({
   selector: 'app-header',
