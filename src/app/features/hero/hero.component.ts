@@ -278,7 +278,10 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
     const techMap: Record<string, string> = {
       'Angular': 'tech-dotnet',
       'C#': 'tech-dotnet',
-      'ASP.NET Core': 'tech-dotnet'
+      'ASP.NET Core': 'tech-dotnet',
+      'TypeScript': 'tech-dotnet',
+      'SQL': 'tech-dotnet',
+      'Azure': 'tech-dotnet'
     };
     
     return techMap[tech] || 'tech-default';

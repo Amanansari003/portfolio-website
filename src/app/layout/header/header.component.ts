@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   constructor(
     private scrollService: ScrollService,
-    private themeService: ThemeService
+    public themeService: ThemeService
   ) {}
 
   ngOnInit(): void {
@@ -48,10 +48,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     if (window.innerWidth >= 768) {
       this.closeMobileMenu();
     }
-  }
-
-  get isDarkTheme(): boolean {
-    return this.themeService.isDarkTheme();
   }
 
   private checkScrollPosition(): void {

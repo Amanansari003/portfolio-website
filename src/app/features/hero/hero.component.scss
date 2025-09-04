@@ -191,14 +191,14 @@
 }
 
 .hero-subtitle {
-  font-size: clamp(1.125rem, 3vw, 1.5rem);
+  font-size: var(--text-lg);
   color: var(--text-secondary);
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
   
   .tech-stack {
-    display: inline;
+    display: block;
     font-weight: var(--font-semibold);
     
     .tech-highlight {

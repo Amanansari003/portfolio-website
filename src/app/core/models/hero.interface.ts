@@ -95,8 +95,8 @@ export const DEFAULT_HERO_CONFIG: HeroConfig = {
   content: {
     staticText: 'Full Stack',
     animatedWords: ['Developer', 'Engineer', 'Creator', 'Architect'],
-    subtitle: 'Crafting scalable web applications with',
-    highlightedTechs: ['Angular', 'C#', 'ASP.NET Core'],
+    subtitle: 'Crafting enterprise-grade web applications with Angular, C#, and ASP.NET Core - from real-time sync systems to performance optimization.',
+    highlightedTechs: ['Angular', 'C#', 'ASP.NET Core', 'TypeScript', 'SQL', 'Azure'],
     buttons: [
       {
         id: 'view-work',
@@ -149,7 +149,7 @@ export const DEFAULT_HERO_CONFIG: HeroConfig = {
     },
     desktop: {
       titleFontSize: 'var(--text-6xl)',
-      subtitleFontSize: 'clamp(1.25rem, 2vw, 1.75rem)',
+      subtitleFontSize: 'var(--text-lg)',
       buttonLayout: 'horizontal'
     }
   }

@@ -36,9 +36,10 @@
 
       <!-- Subtitle with Tech Highlights -->
       <div #subtitleElement class="hero-subtitle-container">
-        <p class="hero-subtitle" [style.font-size]="currentResponsiveConfig.subtitleFontSize">
+        <p class="hero-subtitle" [ngStyle]="{'font-size': currentResponsiveConfig.subtitleFontSize, 'font-style': 'italic'}">
           {{ config.content.subtitle }}
           <span class="tech-stack">
+            My core expertise includes
             <span 
               *ngFor="let tech of config.content.highlightedTechs; let last = last"
               class="tech-highlight"

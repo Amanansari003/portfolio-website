@@ -27,7 +27,7 @@ export const DEFAULT_PROJECTS_CONFIG: ProjectsConfig = {
         '100% improvement in data traceability and eliminating manual mapping efforts'
       ],
       technologies: ['Azure Functions', 'Azure Table Storage', 'REST APIs', 'Postman', 'Webhooks'],
-      codeUrl: 'https://github.com/example/sync-bridge'
+      codeUrl: 'https://github.com/Amanansari003'
     },
     {
       id: 'ecommerce-api',
@@ -43,7 +43,7 @@ export const DEFAULT_PROJECTS_CONFIG: ProjectsConfig = {
         'Restricted disposable email addresses during registration and login, enhancing authentication integrity'
       ],
       technologies: ['ASP.NET Core', 'LINQ', 'Azure DevOps', 'Azure Functions', 'REST APIs'],
-      codeUrl: 'https://github.com/example/ecommerce-api'
+      codeUrl: 'https://github.com/Amanansari003'
     },
     {
       id: '3d-auto-estimating',
@@ -58,7 +58,7 @@ export const DEFAULT_PROJECTS_CONFIG: ProjectsConfig = {
         'Led the deployment and release process across staging and production environments using Docker, Git, and CI/CD pipelines'
       ],
       technologies: ['Angular 19', 'EPPlus', 'Docker', 'Git', 'CI/CD', 'Excel Integration'],
-      codeUrl: 'https://github.com/example/3d-estimating'
+      codeUrl: 'https://github.com/Amanansari003'
     },
     {
       id: 'energy-dealer-hub',
@@ -75,7 +75,7 @@ export const DEFAULT_PROJECTS_CONFIG: ProjectsConfig = {
         'Improved page load speed by 35% and enhanced customer interaction via real-time updates using RxJS and Angular services'
       ],
       technologies: ['.NET Core', 'Dapper', 'Angular 16', 'JWT', 'Directus CMS', 'Angular Material', 'PrimeNG', 'RxJS'],
-      codeUrl: 'https://github.com/example/energy-dealer-hub'
+      codeUrl: 'https://github.com/Amanansari003'
     }
   ]
 };

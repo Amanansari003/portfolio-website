@@ -28,21 +28,21 @@ export const DEFAULT_CONTACT_CONFIG: ContactConfig = {
     {
       type: 'email',
       label: 'Email',
-      value: 'your.email@example.com',
+      value: 'sagar.aman918113@gmail.com',
       icon: 'mail',
-      link: 'mailto:your.email@example.com'
+      link: 'mailto:sagar.aman918113@gmail.com'
     },
     {
       type: 'phone',
       label: 'Phone',
-      value: '+91 XXX-XXX-XXXX',
+      value: '+91 975-924-2416',
       icon: 'phone',
-      link: 'tel:+91XXXXXXXXXX'
+      link: 'tel:+919759242416'
     },
     {
       type: 'location',
       label: 'Location',
-      value: 'India',
+      value: 'Mohali, Punjab, India',
       icon: 'location'
     }
   ],
