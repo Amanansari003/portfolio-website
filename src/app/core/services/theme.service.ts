@@ -6,7 +6,7 @@ import { isPlatformBrowser } from '@angular/common';
   providedIn: 'root'
 })
 export class ThemeService {
-  private readonly currentTheme = signal<Theme>('dark');
+  private readonly currentTheme = signal<Theme>('light');
   private readonly storageKey = 'portfolio-theme';
   private readonly isBrowser: boolean;
     
