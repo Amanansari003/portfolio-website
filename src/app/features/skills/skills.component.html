@@ -1,0 +1,67 @@
+<section id="skills" class="skills-section">
+  <div class="container">
+    <!-- Header -->
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="gradient-text">Technical Skills</span>
+      </h2>
+      <p class="section-subtitle">
+        Expertise in modern web technologies and development tools
+      </p>
+    </div>
+
+    <!-- Skills Categories Grid -->
+    <div class="skills-grid">
+      <div 
+        *ngFor="let category of config.categories; trackBy: trackByCategoryTitle"
+        class="skill-category"
+      >
+        <!-- Category Header -->
+        <div class="category-header">
+          <div class="category-icon">
+            <span class="icon">{{ category.icon }}</span>
+          </div>
+          <h3 class="category-title">{{ category.title }}</h3>
+        </div>
+
+        <!-- Skills List -->
+        <div class="skills-list">
+          <div 
+            *ngFor="let skill of category.skills; trackBy: trackBySkillName"
+            class="skill-item"
+          >
+            <div class="skill-info">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-percentage">{{ skill.level }}%</span>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div 
+              class="skill-progress"
+              [attr.data-skill]="skill.name"
+              [attr.data-level]="skill.level"
+            >
+              <div class="progress-track">
+                <div class="progress-fill"></div>
+              </div>
+              <span class="progress-text">0%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Technologies -->
+    <div class="additional-tech-section">
+      <h3 class="additional-title">Additional Technologies</h3>
+      <div class="tech-tags">
+        <span 
+          *ngFor="let tech of config.additionalTechnologies; trackBy: trackByTechName"
+          class="tech-tag"
+        >
+          {{ tech.name }}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,96 @@
+<section #heroContainer class="hero-section" [class.loaded]="heroState$().isLoaded">
+  <!-- Background Elements -->
+  <div #backgroundShapes class="hero-background">
+    <div class="gradient-overlay"></div>
+    <div class="animated-shapes"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="hero-content">
+    <div class="container">
+      <!-- Main Title with Typewriter -->
+      <div #titleElement class="hero-title-container">
+        <h1 class="hero-title">
+          <span 
+            class="static-text"
+            [style.font-size]="currentResponsiveConfig.titleFontSize"
+            >
+              {{ config.content.staticText }}&#160;
+            </span>
+          <span class="animated-text-wrapper">
+            <span 
+              class="animated-text"
+              [style.font-size]="currentResponsiveConfig.titleFontSize"
+            >
+              {{ typewriterText() }}
+            </span>
+            <span 
+              class="cursor" 
+              [class.visible]="showCursor()"
+              [class.typing]="isTyping()"
+              [style.font-size]="currentResponsiveConfig.titleFontSize"
+            >|</span>
+          </span>
+        </h1>
+      </div>
+
+      <!-- Subtitle with Tech Highlights -->
+      <div #subtitleElement class="hero-subtitle-container">
+        <p class="hero-subtitle" [ngStyle]="{'font-size': currentResponsiveConfig.subtitleFontSize, 'font-style': 'italic'}">
+          {{ config.content.subtitle }}
+          <span class="tech-stack">
+            My core expertise includes
+            <span 
+              *ngFor="let tech of config.content.highlightedTechs; let last = last"
+              class="tech-highlight"
+              [ngClass]="getTechHighlightClass(tech)"
+            >
+              {{ tech }}<span *ngIf="!last">, </span>
+            </span>
+          </span>
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div #buttonsContainer class="hero-buttons" [ngClass]="buttonLayoutClass">
+        <button
+          *ngFor="let button of config.content.buttons; trackBy: trackByButtonId"
+          class="hero-button"
+          [ngClass]="'button-' + button.type"
+          [attr.aria-label]="button.ariaLabel || button.text"
+          (click)="onButtonClick(button)"
+          type="button"
+        >
+          <span class="button-content">
+            <svg *ngIf="button.icon" class="button-icon" width="20" height="20">
+              <!-- Add icon SVG here based on button.icon -->
+            </svg>
+            <span class="button-text">{{ button.text }}</span>
+          </span>
+          
+          <!-- Button hover effects -->
+          <div class="button-ripple"></div>
+          <div class="button-shine"></div>
+        </button>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator" (click)="scrollToSection('about')">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span class="scroll-text">Scroll to explore</span>
+        <svg class="scroll-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6,9 12,15 18,9"></polyline>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading State (Optional) -->
+  <!-- <div *ngIf="!heroState$().isLoaded" class="hero-loading">
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+    </div>
+  </div> -->
+</section>

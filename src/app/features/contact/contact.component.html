@@ -1,0 +1,105 @@
+<section id="contact" class="contact-section">
+  <div class="container">
+    <!-- Header -->
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="gradient-text">Get In Touch</span>
+      </h2>
+      <p class="section-subtitle">
+        Let's discuss how we can work together to bring your ideas to life
+      </p>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="contact-content">
+      <!-- Left Column - Contact Information -->
+      <div class="contact-info-section">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <h3 class="info-title">Contact Information</h3>
+          
+          <div class="contact-list">
+            <div 
+              *ngFor="let contact of config.contactInfo; trackBy: trackByContactType"
+              class="contact-item"
+              [class.clickable]="!!contact.link"
+              (click)="onContactClick(contact)"
+            >
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path [attr.d]="getContactIcon(contact.icon)"></path>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">{{ contact.label }}</span>
+                <span class="contact-value">{{ contact.value }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-section">
+          <h3 class="info-title">Connect with me</h3>
+          <div class="social-links">
+            <button
+              *ngFor="let social of config.socialLinks; trackBy: trackBySocialPlatform"
+              class="social-link"
+              [attr.aria-label]="social.label"
+              (click)="onSocialClick(social)"
+              type="button"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path [attr.d]="getSocialIcon(social.platform)"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column - CTA Section -->
+      <div class="cta-section">
+        <div class="cta-card">
+          <div class="cta-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          
+          <div class="cta-content">
+            <h3 class="cta-title">{{ config.availability.status }}</h3>
+            <p class="cta-description">{{ config.availability.description }}</p>
+          </div>
+          
+          <div class="cta-actions">
+            <button 
+              class="btn btn-primary btn-sm cta-button"
+              (click)="onSendMessage()"
+              type="button"
+            >
+              <svg class="button-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Send Message</span>
+            </button>
+            
+            <button 
+              class="btn btn-sm cta-button secondary"
+              (click)="onDownloadResume()"
+              type="button"
+            >
+              <svg class="button-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
+                <polyline points="7,10 12,15 17,10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

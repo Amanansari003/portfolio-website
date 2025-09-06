@@ -1,0 +1,178 @@
+// Simple layout matching your React code structure
+
+.about-section {
+  padding: var(--space-16) var(--space-6);
+  background: var(--bg-disabled);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+  
+  .section-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-4);
+    
+    .gradient-text {
+      background: var(--gradient-primary);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  
+  .section-subtitle {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    max-width: 680px;
+    margin: 0 auto;
+  }
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+.about-text {
+  .text-block {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-6);
+    
+    .highlight {
+      color: var(--primary-400);
+      font-weight: var(--font-semibold);
+    }
+  }
+  
+  .education-section {
+    margin-top: var(--space-8);
+    
+    .education-title {
+      font-size: var(--text-xl);
+      font-weight: var(--font-semibold);
+      margin-bottom: var(--space-4);
+      color: var(--text-primary);
+    }
+    
+    .education-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-primary);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      backdrop-filter: blur(10px);
+      
+      .education-content {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--space-3);
+        
+        .education-icon {
+          width: 20px;
+          height: 20px;
+          color: var(--primary-400);
+          margin-top: 2px;
+        }
+        
+        .education-details {
+          .degree {
+            font-size: var(--text-base);
+            font-weight: var(--font-semibold);
+            color: var(--text-primary);
+            margin-bottom: 2px;
+          }
+          
+          .university {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            margin-bottom: 2px;
+          }
+          
+          .duration {
+            font-size: var(--text-xs);
+            color: var(--text-tertiary);
+          }
+        }
+      }
+    }
+  }
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+
+.highlight-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-normal);
+  text-align: center;
+  
+  &:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+    border-color: var(--primary-400);
+  }
+  
+  .highlight-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    
+    .highlight-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--gradient-primary);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      svg {
+        width: 24px;
+        height: 24px;
+        color: white;
+      }
+    }
+    
+    .highlight-title {
+      font-size: var(--text-base);
+      font-weight: var(--font-semibold);
+      color: var(--text-primary);
+      margin: 0;
+    }
+    
+    .highlight-description {
+      font-size: var(--text-xs);
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+<section id="projects" class="projects-section">
+  <div class="container">
+    <!-- Header -->
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="gradient-text">Featured Projects</span>
+      </h2>
+      <p class="section-subtitle">
+        Showcasing innovative solutions that deliver real business impact
+      </p>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid">
+      <div 
+        *ngFor="let project of config.projects; trackBy: trackByProjectId"
+        class="project-card"
+        [attr.data-project-id]="project.id"
+        #projectCard
+      >
+        <!-- Project Header -->
+        <div class="project-header">
+          <div class="project-icon">
+            <span class="icon">{{ project.icon }}</span>
+          </div>
+          
+          <div class="project-info">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+          </div>
+        </div>
+
+        <!-- Key Achievements -->
+        <div class="achievements-section">
+          <h4 class="section-subtitle">Key Achievements:</h4>
+          <div class="achievements-list">
+            <div 
+              *ngFor="let achievement of project.achievements; trackBy: trackByAchievement"
+              class="achievement-item"
+            >
+              <div class="achievement-bullet">
+                <svg width="6" height="6" viewBox="0 0 24 24" fill="currentColor">
+                  <circle cx="12" cy="12" r="12"></circle>
+                </svg>
+              </div>
+              <span class="achievement-text">{{ achievement }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technologies Used -->
+        <div class="technologies-section">
+          <h4 class="section-subtitle">Technologies:</h4>
+          <div class="tech-tags">
+            <span 
+              *ngFor="let tech of project.technologies; trackBy: trackByTechnology"
+              class="tech-tag"
+            >
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="project-actions">
+          <button class="btn-primary" (click)="viewProjectDetails(project)">
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15,3 21,3 21,9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            View Details
+          </button>
+          
+          <button class="btn-secondary" (click)="viewProjectCode(project)" *ngIf="project.codeUrl">
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16,18 22,12 16,6"></polyline>
+              <polyline points="8,6 2,12 8,18"></polyline>
+            </svg>
+            Code
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
