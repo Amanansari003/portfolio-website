@@ -34,7 +34,7 @@
         [attr.aria-label]="'Switch to ' + (this.themeService.isDarkTheme() ? 'light' : 'dark') + ' theme'"
         type="button"
       >
-        <ng-container *ngIf="!this.themeService.isThemeInitialized$()">
+        <ng-container *ngIf="this.themeService.isThemeInitialized$()">
           <svg 
             *ngIf="this.themeService.isDarkTheme()" 
             class="theme-icon"
