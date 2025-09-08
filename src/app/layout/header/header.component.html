@@ -114,8 +114,10 @@
             (click)="toggleTheme()"
             type="button"
           >
+          <ng-container *ngIf="this.themeService.isThemeInitialized$()">
             <span *ngIf="this.themeService.isDarkTheme()">🌞 Light Mode</span>
             <span *ngIf="!this.themeService.isDarkTheme()">🌙 Dark Mode</span>
+          </ng-container>
           </button>
         </div>
       </div>
