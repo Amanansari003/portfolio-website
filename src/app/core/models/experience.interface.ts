@@ -26,7 +26,7 @@ export const DEFAULT_EXPERIENCE_CONFIG: ExperienceConfig = {
   experiences: [
     {
       id: 'cloud-analogy',
-      position: 'Full Stack Developer',
+      position: '.Net - Full Stack Developer',
       company: 'Cloud Analogy',
       location: 'Mohali',
       startDate: 'July 2023',
