@@ -7,10 +7,12 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class ThemeService {
   private readonly currentTheme = signal<Theme>('light');
+  private readonly _isTheameInitialized = signal(false);
   private readonly storageKey = 'portfolio-theme';
   private readonly isBrowser: boolean;
     
   readonly theme$ = this.currentTheme.asReadonly();
+  readonly isThemeInitialized$ = this._isTheameInitialized.asReadonly();
   
 
   // 1. Inject PLATFORM_ID to determine the execution environment
@@ -41,11 +43,14 @@ export class ThemeService {
         if (!this.getStoredTheme()) {
           this.setTheme(e.matches ? 'dark' : 'light');
         }
-      });
+      }
+    );
+
+    this._isTheameInitialized.set(true);
   }
 
   toggleTheme(): void {
-    const newTheme: Theme = this.currentTheme() === 'dark' ? 'light' : 'dark';
+    const newTheme: Theme = this.currentTheme() === 'light' ? 'dark' : 'light';
     this.setTheme(newTheme);
   }
 
