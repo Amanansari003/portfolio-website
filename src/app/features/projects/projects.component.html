@@ -63,7 +63,7 @@
 
         <!-- Action Buttons -->
         <div class="project-actions">
-          <button class="btn-primary" (click)="viewProjectDetails(project)">
+          <button class="btn btn-primary btn-sm" (click)="viewProjectDetails(project)">
             <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
               <polyline points="15,3 21,3 21,9"></polyline>
@@ -72,7 +72,7 @@
             View Details
           </button>
           
-          <button class="btn-secondary" (click)="viewProjectCode(project)" *ngIf="project.codeUrl">
+          <button class="btn btn-secondary btn-sm" (click)="viewProjectCode(project)" *ngIf="project.codeUrl">
             <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <polyline points="16,18 22,12 16,6"></polyline>
               <polyline points="8,6 2,12 8,18"></polyline>

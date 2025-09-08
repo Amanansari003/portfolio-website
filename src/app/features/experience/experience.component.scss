@@ -261,10 +261,10 @@
       content: '•';
       position: absolute;
       left: 0;
-      top: 2px;
+      top: -4px;
       color: var(--primary-400);
       font-weight: var(--font-bold);
-      font-size: 0.75em;
+      font-size: var(--text-lg);
     }
     
     &:last-child {
