@@ -154,7 +154,7 @@
     }
     
     .project-description {
-      font-size: var(--text-sm);
+      font-size: var(--text-base);
       color: var(--text-secondary);
       line-height: 1.5;
       margin: 0;
@@ -207,7 +207,7 @@
     }
     
     .achievement-text {
-      font-size: var(--text-sm);
+      font-size: var(--text-base);
       color: var(--text-secondary);
       line-height: 1.5;
     }
@@ -224,7 +224,7 @@
     color: var(--text-primary);
     padding: var(--space-1) var(--space-3);
     border-radius: var(--radius-md);
-    font-size: var(--text-xs);
+    font-size: var(--text-sm);
     font-weight: var(--font-medium);
     border: 1px solid var(--border-primary);
     opacity: 0;
@@ -257,59 +257,6 @@
     flex-direction: column;
   }
   
-  // .btn-primary,
-  // .btn-secondary {
-  //   display: flex;
-  //   align-items: center;
-  //   gap: var(--space-2);
-  //   padding: var(--space-3) var(--space-4);
-  //   border-radius: var(--radius-md);
-  //   font-size: var(--text-sm);
-  //   font-weight: var(--font-medium);
-  //   transition: all var(--transition-normal);
-  //   cursor: pointer;
-  //   border: none;
-  //   text-decoration: none;
-    
-  //   .btn-icon {
-  //     width: 16px;
-  //     height: 16px;
-  //   }
-  // }
-  
-  // .btn-primary {
-  //   background: var(--button-primary-bg);
-  //   color: var(--bg-primary);
-  //   box-shadow: var(--shadow);
-    
-  //   &:hover {
-  //     background: var(--gradient-secondary);
-  //     transform: translateY(-2px);
-  //     box-shadow: var(--shadow-lg);
-  //   }
-    
-  //   &:active {
-  //     transform: translateY(0);
-  //   }
-  // }
-  
-  // .btn-secondary {
-  //   background: var(--button-secondary-bg);
-  //   color: var(--text-primary);
-  //   border: 1px solid var(--border-accent);
-    
-  //   &:hover {
-  //     background: var(--bg-elevated);
-  //     color: var(--primary-600);
-  //     transform: translateY(-2px);
-  //     box-shadow: var(--shadow-md);
-  //     border-color: var(--primary-500);
-  //   }
-    
-  //   &:active {
-  //     transform: translateY(0);
-  //   }
-  // }
 }
 
 // Light theme specific adjustments
@@ -406,7 +353,7 @@
       }
       
       .project-description {
-        font-size: var(--text-xs);
+        font-size: var(--text-sm);
       }
     }
   }
@@ -414,13 +361,13 @@
   .achievements-section,
   .technologies-section {
     .section-subtitle {
-      font-size: var(--text-sm);
+      font-size: var(--text-base);
     }
   }
   
   .achievement-item {
     .achievement-text {
-      font-size: var(--text-xs);
+      font-size: var(--text-sm);
     }
   }
 }
