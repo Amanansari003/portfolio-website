@@ -49,7 +49,7 @@
 
 .about-text {
   .text-block {
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
     color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: var(--space-6);
@@ -99,13 +99,13 @@
           }
           
           .university {
-            font-size: var(--text-sm);
+            font-size: var(--text-base);
             color: var(--text-secondary);
             margin-bottom: 2px;
           }
           
           .duration {
-            font-size: var(--text-xs);
+            font-size: var(--text-sm);
             color: var(--text-tertiary);
           }
         }
@@ -170,7 +170,7 @@
     }
     
     .highlight-description {
-      font-size: var(--text-xs);
+      font-size: var(--text-sm);
       color: var(--text-secondary);
       line-height: 1.6;
       margin: 0;
