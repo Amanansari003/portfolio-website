@@ -125,7 +125,7 @@
     left: 50%;
     width: 0;
     height: 2px;
-    background: var(--gradient-primary);
+    background: var(--primary-500);
     border-radius: 1px;
     transition: all var(--transition-fast);
     transform: translateX(-50%);
@@ -141,7 +141,7 @@
   }
 
   &.active {
-    color: var(--primary-400);
+    color: var(--primary-500);
     
     &::before {
       width: 100%;
