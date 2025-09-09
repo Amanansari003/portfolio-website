@@ -58,6 +58,12 @@ export const DEFAULT_CONTACT_CONFIG: ContactConfig = {
       url: 'https://github.com/Amanansari003',
       icon: 'github',
       label: 'View GitHub Profile'
+    },
+    {
+      platform: 'Instagram',
+      url: 'https://www.instagram.com/i_4man03?igsh=MXA5Znc2ajRkM2gxZg==',
+      icon: 'instagram',
+      label: 'Follow on Instagram'
     }
   ],
   availability: {
