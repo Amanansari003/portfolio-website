@@ -33,12 +33,12 @@ export class ThemeService {
       this.setTheme(savedTheme);
     } else {
       // Check system preference
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const prefersDark = window.matchMedia('(prefers-color-scheme: light)').matches;
       this.setTheme(prefersDark ? 'dark' : 'light');
     }
 
     // Listen for system theme changes
-    window.matchMedia('(prefers-color-scheme: dark)')
+    window.matchMedia('(prefers-color-scheme: light)')
       .addEventListener('change', (e) => {
         if (!this.getStoredTheme()) {
           this.setTheme(e.matches ? 'dark' : 'light');
